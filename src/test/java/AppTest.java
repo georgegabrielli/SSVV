@@ -14,11 +14,11 @@ import java.io.IOException;
 
 public class AppTest{
 
-    private static final String PRODUCT_CATEGORY = "asdaa";
-    private static final int PRODUCT_CODE = 12345;
+    private static final String PRODUCT_CATEGORY = "abc";
+    private static final int PRODUCT_CODE = 1;
     private static final String PRODUCT_NAME = "BEMVEU";
-    private static final int PRODUCT_QUANTITY = 12;
-    private static final String PRODUCT_SUPPLIER = "GERMANIA";
+    private static final int PRODUCT_QUANTITY = 1;
+    private static final String PRODUCT_SUPPLIER = "abc";
     private StoreRepository repository;
 
     @Before
@@ -163,4 +163,25 @@ public class AppTest{
 
         Assert.assertEquals(size, repository.getAllProducts().size());
     }
+
+    @Test
+    public void testGetProductCategories(){
+        Assert.assertTrue(repository.getProductsCategory(PRODUCT_CATEGORY).isEmpty());
+    }
+
+    @Test
+    public void testGetProductCategorieswAdd() throws IOException {
+        Product product = new Product();
+
+        product.setCategory(PRODUCT_CATEGORY);
+        product.setCode(PRODUCT_CODE);
+        product.setName(PRODUCT_NAME);
+        product.setQuantity(PRODUCT_QUANTITY);
+        product.setSupplier(PRODUCT_SUPPLIER);
+
+        repository.addNewProduct(product);
+
+        Assert.assertFalse(repository.getProductsCategory(PRODUCT_CATEGORY).isEmpty());
+    }
+
 }
