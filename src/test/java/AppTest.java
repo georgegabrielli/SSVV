@@ -184,4 +184,8 @@ public class AppTest{
         Assert.assertFalse(repository.getProductsCategory(PRODUCT_CATEGORY).isEmpty());
     }
 
+    @Test
+    public void testGetProductCategoriesEmptyList(){
+        Assert.assertTrue(repository.getProductsCategory(PRODUCT_CATEGORY).isEmpty());
+    }
 }
