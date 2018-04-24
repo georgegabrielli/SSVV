@@ -165,7 +165,17 @@ public class AppTest{
     }
 
     @Test
-    public void testGetProductCategories(){
+    public void testGetProductCategories() throws IOException{
+        Product product = new Product();
+
+        product.setCategory("5lei");
+        product.setCode(PRODUCT_CODE);
+        product.setName(PRODUCT_NAME);
+        product.setQuantity(PRODUCT_QUANTITY);
+        product.setSupplier(PRODUCT_SUPPLIER);
+
+        repository.addNewProduct(product);
+
         Assert.assertTrue(repository.getProductsCategory(PRODUCT_CATEGORY).isEmpty());
     }
 
