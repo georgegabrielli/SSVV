@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * Created by gobi on 4/24/18.
  */
-public class Integration {
+public class IntegrationTest {
 
     private static final String PRODUCT_CATEGORY = "abc";
     private static final int PRODUCT_CODE = 1;
@@ -63,7 +63,7 @@ public class Integration {
 
 
     @Test
-    public void integrate() throws IOException{
+    public void testIntegrate() throws IOException{
         testAdd();
         testGetProductCategories();
         testGetStockDifferentName();
