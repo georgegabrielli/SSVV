@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * Created by gobi on 4/24/18.
  */
-public class IntegrationTest {
+public class IntegrationHomeworkTest {
 
     private static final String PRODUCT_CATEGORY = "abc";
     private static final int PRODUCT_CODE = 1;
@@ -25,6 +25,7 @@ public class IntegrationTest {
     }
 
     public void testAdd() throws IOException {
+        repository.setFile("testFile.txt");
         Product product = new Product();
 
         product.setCategory(PRODUCT_CATEGORY);
@@ -62,8 +63,19 @@ public class IntegrationTest {
     @Test
     public void testIntegrate() throws IOException{
         testAdd();
+        testGetProductCategoriesAndAdd();
+        testGetProductCategoriesAndAddAndGetStock();
+    }
+
+    private void testGetProductCategoriesAndAddAndGetStock() throws IOException {
+        testAdd();
         testGetProductCategories();
         testGetStockDifferentName();
+    }
+
+    private void testGetProductCategoriesAndAdd() throws IOException {
+        testAdd();
+        testGetProductCategories();
     }
 
 }
