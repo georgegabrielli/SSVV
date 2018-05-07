@@ -24,7 +24,10 @@ public class IntegrationTest {
         repository.setFile("testFile.txt");
     }
 
+    @Test
     public void testAdd() throws IOException {
+        repository.setFile("testFile.txt");
+
         Product product = new Product();
 
         product.setCategory(PRODUCT_CATEGORY);
@@ -40,10 +43,13 @@ public class IntegrationTest {
         Assert.assertEquals(size + 1, repository.getAllProducts().size());
     }
 
-    public void testGetProductCategories(){
+    @Test
+    public void testGetProductCategories() throws IOException {
+        testAdd();
         Assert.assertFalse(repository.getProductsCategory(PRODUCT_CATEGORY).isEmpty());
     }
 
+    @Test
     public void testGetStockDifferentName() throws IOException{
         Product product = new Product();
 

@@ -67,13 +67,15 @@ public class IntegrationHomeworkTest {
         testGetProductCategoriesAndAddAndGetStock();
     }
 
-    private void testGetProductCategoriesAndAddAndGetStock() throws IOException {
+    @Test
+    public void testGetProductCategoriesAndAddAndGetStock() throws IOException {
         testAdd();
         testGetProductCategories();
         testGetStockDifferentName();
     }
 
-    private void testGetProductCategoriesAndAdd() throws IOException {
+    @Test
+    public void testGetProductCategoriesAndAdd() throws IOException {
         testAdd();
         testGetProductCategories();
     }

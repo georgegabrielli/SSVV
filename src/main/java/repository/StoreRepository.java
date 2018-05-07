@@ -86,6 +86,7 @@ public class StoreRepository {
 	public void setFile(String file){
 		this.file = file;
 		clearFile();
+		allProducts.clear();
 	}
 
 	private void clearFile() {
