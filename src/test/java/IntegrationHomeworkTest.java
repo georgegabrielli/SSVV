@@ -20,6 +20,7 @@ public class IntegrationHomeworkTest {
 
     @Before
     public void initialize(){
+        System.out.println("qqqqqqq");
         this.repository = new StoreRepository();
         repository.setFile("testFile.txt");
     }

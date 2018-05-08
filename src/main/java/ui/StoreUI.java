@@ -27,7 +27,7 @@ public class StoreUI {
         System.out.println(menu);
     }
 
-    public void AddNewProduct()
+    public void addNewProduct()
     {
         System.out.println("Give the Product code:");
         int pCode = Integer.parseInt(in.nextLine());
