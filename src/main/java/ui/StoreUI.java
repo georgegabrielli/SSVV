@@ -88,7 +88,7 @@ public class StoreUI {
     public void executeCommand(int c) {
         switch(c) {
             case 1:
-                AddNewProduct();
+                addNewProduct();
                 break;
             case 2:
                 DisplayCategory();
