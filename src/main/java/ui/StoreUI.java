@@ -46,7 +46,7 @@ public class StoreUI {
         System.out.println("Product Added");
     }
 
-    public void DisplayCategory()
+    public void displayCategory()
     {
         System.out.println("Give category");
         String cat=in.nextLine();
@@ -91,7 +91,7 @@ public class StoreUI {
                 addNewProduct();
                 break;
             case 2:
-                DisplayCategory();
+                displayCategory();
                 break;
             case 3:
                 DisplayStock();
